@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        var videos = ["https://www.youtube.com/embed/vOYn4aMe5-Y", 
+		"https://www.youtube.com/embed/PvVc9y2xMJA",
+		"https://www.youtube.com/embed/7kdeahc-YRU"];
+        window.onload = function () {
+            var playerDiv = document.getElementById("random_player");
+            var player = document.createElement("IFRAME");
+            var randomVideoUrl = videos[Math.floor(Math.random() * videos.length)];
+            player.setAttribute('width', '640');
+            player.setAttribute('height', '390');
+            player.setAttribute('src', randomVideoUrl);
+
+            playerDiv.appendChild(player);
+        };
+    </script>
+</head>
+
+<body>
+    <div id="random_player" />
+</body>
+
+</html>
